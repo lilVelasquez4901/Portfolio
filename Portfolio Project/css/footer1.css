@@ -1,0 +1,209 @@
+ :root {
+    --wrds: #ffcc00;
+    --wrds2: #ff9500;
+    --bg1: #4E3076;
+    --bg2: #1f202c;
+    --void: #131e20;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--void);
+    z-index: 9999;
+} body {
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+} h1, h3, p {
+    color: var(--wrds);
+} .mainContent{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px var(--void);
+    border-radius: 1rem;
+    margin: 25px 250px 25px 250px;
+    padding: 15px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+} #contactForm{
+    align-self: center;
+} .abt_Me {
+    color: var(--wrds);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+} .p1{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 25rem;
+    flex-direction: column;
+} .box_Title {
+    align-self: center;
+} .p1_Wrds {
+    font-size: large;
+    display: flex;
+    border: 2px solid var(--wrds2);
+    color: var(--wrds);
+    padding: 5px;
+    margin: 5px;
+    flex-direction: column;
+    justify-self: left;
+} .p2{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 25rem;
+    flex-direction: column;
+} .p2_Wrds {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} .p3{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 25rem;
+    flex-direction: column;
+} .p3_Wrds{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 9999;
+}  .shard_lines {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+} .shards{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}  .shard {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    pointer-events: none; 
+} .shard a {
+    position: absolute;
+    color: var(--wrds);
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: all;
+    left: 3%; top: 60%; transform: rotate(-10deg);
+}  #shard_Return {
+    clip-path: polygon(25% 25%, 0% 100%, 0% 60%);
+    background: var(--void);
+} #pfp{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+} ol > li {
+    color: var(--wrds2);
+} a:visited {
+    color: var(--wrds);
+    text-decoration: line-through;
+} a:link {
+    color: var(--wrds2);
+    text-decoration: underline;
+} img {
+    height: 185px;
+} form {
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 15px;
+} .feedback-input {
+  color: var(--wrds);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--void); 
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+} .feedback-input:focus {
+    border: 2px solid var(--void);
+} textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+} [type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: var(--bg2); 
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: var(--wrds);
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+} [type="submit"]:hover {
+    background: var(--bg2);
+} #responseMessage {
+  border-radius: 5px;
+  color: var(--wrds);
+  font-size: 20px;
+  text-align: center;
+  /* max-width: 200px; */
+  margin-left: auto;
+  margin-right: auto;
+} #responseMessage.success {
+  color: #008000; 
+} #responseMessage.error {
+  color: #FF0000; 
+} #responseMessage.show {
+  opacity: 1;
+}  @media(max-width: 1280px){
+    .shard a{
+        font-size: 1rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > a {
+        top: 20%; left: 39%;
+    }
+}
+@media(min-width: 768px) and (max-width:1279px){
+    .shard a{
+        top: 55%; left: 0%;
+        transform: rotate(-30deg);
+    }
+} @media(min-width: 480px) and (max-width: 767px){
+    .shard a{
+        top: 50%; right: 80%;
+        transform: rotate(-30deg);
+    }
+}
+   .orientation{margin-top: 8px;font: 0.9rem;}
+    .only-portrait, .only-landscape{display: none;}
+    @media (orientation: portrait){.only-portrait{display: inline;}}
+    @media (orientation: landscape){.only-landscape{display: inline;}}

@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} :root {
+    --wrds: #ffcc00;
+    --wrds2: #ff9500;
+    --bg1: #4E3076;
+    --bg2: #1f202c;
+    --void: #131e20;
+} body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--void);
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--void);
+    z-index: 9999;
+} .shards {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--void);
+    overflow: hidden;
+} .shard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+} .shard a {
+    position: absolute;
+    color: var(--wrds);
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: all;
+} #shard-projects {
+    clip-path: polygon(0% 10%, 47% 48%, 0% 85%);
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+} #shard-projects a {
+    top: 40%; left: 8%; transform: rotate(-5deg);
+} #shard-pfp {
+    clip-path: polygon(3% 0%, 47% 0%, 47% 46%);
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+} #shard-pfp a {
+    top: 24%; left: 42%; transform: rotate(45deg);
+} #shard-pfp > #pfp{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+} #shard-skills {
+    clip-path: polygon(48.3% 43%, 100% 0%, 100% 0%, 100% 65%);
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+} #shard-skills a {
+    top: 40%; right: 25%; transform: rotate(-10deg);
+} #shard-footer1 {
+    clip-path: polygon(37% 61%, 46.8% 50.5%, 34.8% 100%, 0% 100%);
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+} #shard-footer1 a {
+    bottom: 20%; left: 30%; transform: rotate(-50deg);
+} #shard-footer2 {
+    clip-path: polygon(48.5% 49%, 75% 100%, 50% 100%);
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+} #shard-footer2 a {
+    bottom: 20%; left: 55%; transform: rotate(60deg);
+} .shard-lines {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+} #left{
+    font-family: lib;
+} #right{
+    font-family: form;
+} @media(min-width: 1281px){
+    .shard a{
+        font-family: 1.2rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > span > a {
+        top: 20%; left: 40%;
+    } #shard-skills > span > a{
+        font-size: x-large;
+        top: 38%; left: 75%;
+    } #shard-projects > span > a{
+        font-size: x-large;
+        top: 45%; left: 20%;
+    } #shard-footer1 > span > a{
+        font-size: x-large;
+    } #shard-footer2 > span > a{
+        font-size: x-large;
+        top: 80%;
+    }
+} @media(min-width: 1025px) and (max-width: 1280px){
+    .shard a{
+        font-size: 1rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > span > a {
+        top: 20%; left: 39%;
+    }
+} @media(min-width:769px) and (max-width: 1024px){
+    #shard-pfp > span > a{
+        top: 12%; left: 30%;
+        transform: rotate(10deg)
+    } #shard-pfp > #pfp{
+        top: 15%; left: 28%;
+    } #shard-projects > span > a{
+        font-size: x-large;
+        top: 45%; left: 15%;
+    } #shard-skills > span > a{
+        font-size: x-large;
+        top: 38%; left: 80%;
+    } #shard-footer1 > span > a{
+        font-size: x-large;
+        left: 28%; top: 75%;
+        transform: rotate(-45deg);
+    } #shard-footer2 > span > a{
+        font-size: x-large;
+        left: 50%; top: 75%;
+    }
+}
+@media(min-width: 480px) and (max-width: 768px){
+    .shard-lines{
+        visibility: hidden;
+    }
+    .shard-lines > #l1 {
+        visibility: visible;
+        stroke: black; /*Used for coloring instead of color: */
+        transform: translate(100px, -26px) rotate(105.5deg) scale(2);
+    } #shard-pfp, #shard-skills, #shard-footer1, #shard-footer2, #shard-projects {
+        visibility: hidden;
+    } #shard-pfp{
+        visibility: visible;
+        transform: rotate(270deg) translate(575px, 150px);
+        clip-path: polygon(0% 4%, 49% 0%, 62% 55%);
+    } #shard-pfp > #pfp {
+        top: 5%; left: 25%;
+        transform: rotate(45deg);
+    } #shard-pfp > span > a{
+        top: 17%; left: 20%;
+        font-size: x-large;
+        transform: rotate(50deg);
+    } #shard-skills{
+        visibility: visible;
+        transform: translate(75px, -100px) scale(0.935);
+    } #shard-skills > span > a{
+        font-size: xx-large;
+    } .shard-lines > #l5{
+        visibility: visible;
+        transform: translate(10px, -8.3px);
+    } .shard-lines > #l6{
+        visibility: visible;
+        transform: translate(10px, -8.3px);
+    } .shard-lines > #l3 {
+        visibility: visible;
+        transform: translate(-5px, 22.5px) scale(0.91);
+        stroke: black;
+    } .shard-lines > #l4{
+        visibility: visible;
+        transform: translate(-11px, 16.2px) scale(1.04);
+        stroke: black;
+    } #shard-projects{
+        visibility: visible;
+        scale: 0.8;
+        transform: translate(-90px, 250px);
+        /* clip-path: polygon(0% 10%, 47% 48%, 0% 85%); */
+    } #shard-projects > span > a{
+        font-size: xx-large;
+    } #shard-footer1{
+        visibility: visible;
+        transform: translate(70px, 110px);
+    } #shard-footer1 > span > a{
+        font-size: xx-large;
+        left: 23%; top: 76%;
+    } .shard-lines > #l7{
+        visibility: visible;
+        stroke: black;
+        transform: translate(9.4px, 10px);
+    } .shard-lines > #l8{
+        visibility: visible;
+        stroke: black;
+        transform: translate(9.4px, 10px);
+    } #shard-footer2{
+        visibility: visible;
+        transform: scale(1.05) translate(95px, 100px)
+    } #shard-footer2 > span > a{
+        font-size: xx-large;
+        left: 48%; top: 75%;
+    } .shard-lines > #l9{
+        stroke: black;
+        visibility: visible;
+        transform: translate(13px, 9px);
+    } .shard-lines > #l10{
+        visibility: visible;
+        stroke: black;
+        transform: translate(13px, 9px);
+    }
+}
+   .orientation{margin-top: 8px;font: 0.9rem;}
+    .only-portrait, .only-landscape{display: none;}
+    @media (orientation: portrait){.only-portrait{display: inline;}}
+    @media (orientation: landscape){.only-landscape{display: inline;}}
+    @font-face {
+        font-family: form;
+        src: url(../fonts/Quintessential/Quintessential-Regular.ttf);
+    }
+    @font-face {
+        font-family: lib;
+        src: url(../fonts/Quintessential/Furgatorio\ Titling.ttf);
+    } @media (max-width: 480px){
+        #shard-pfp > #pfp {
+            top: 0%; left: 15%;
+        } #shard-pfp > span > a{
+            left: 25%; top: 20%;
+            transform: rotate(75deg);
+        } #shard-footer1 > span > a{
+            left: 20%; top: 80%;
+            transform: rotate(-75deg);
+        } #shard-footer2 > span > a{
+            left: 50%; top: 80%;
+            transform: rotate(80deg);
+        }
+    }

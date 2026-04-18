@@ -1,0 +1,154 @@
+ :root {
+    --wrds: #ffcc00;
+    --wrds2: #ff9500;
+    --bg1: #4E3076;
+    --bg2: #1f202c;
+    --void: #131e20;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--void);
+    z-index: 9999;
+} body {
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+} h1, h3, p {
+    color: var(--wrds);
+} .mainContent{
+    display: flex;
+    align-content: space-around;
+    flex: 1;
+} .abt_Me {
+    color: var(--wrds);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+} .who_Am_I{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 25rem;
+    flex-direction: column;
+    align-self: flex-start;
+} .box_Title {
+    align-self: center;
+} .w_A_I_Wrds {
+    font-size: large;
+    display: flex;
+    border: 2px solid var(--wrds2);
+    color: var(--wrds);
+    padding: 5px;
+    margin: 5px;
+    justify-self: left;
+} .d_I_H_A_A{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-left: auto;
+    width: 25rem;
+} .d_I_H_A_A_Wrds {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} .tech_Tree{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-left: auto;
+    width: 25rem;
+} .tech_Flex{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} .idea_Time{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: auto;
+    width: 25rem;
+} .idea_Wrds{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 9999;
+}  .shard_lines {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+} .shards{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}  .shard {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    pointer-events: none; 
+} .shard a {
+    position: absolute;
+    color: var(--wrds);
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: all;
+    left: 3%; top: 60%; transform: rotate(-10deg);
+}  #shard_Return {
+    clip-path: polygon(25% 25%, 0% 100%, 0% 60%);
+    background: var(--void);
+} #pfp{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+} ol > li {
+    color: var(--wrds2);
+} a:visited {
+    color: var(--wrds);
+    text-decoration: line-through;
+} a:link {
+    color: var(--wrds2);
+    text-decoration: underline;
+}  @media(min-width: 1280px){
+    .shard a{
+        font-size: 1rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > a {
+        top: 20%; left: 39%;
+    }
+}
+@media(min-width: 768px) and (max-width: 1279px){
+    .shard a{
+        top: 55%; left: 0%;
+        transform: rotate(-30deg);
+    }
+} @media(min-width: 480px) and (max-width: 767px){
+    .shard a{
+        transform: rotate(-30deg);
+        top: 65%; right: 100%; bottom: 10%;
+    }
+}
+   .orientation{margin-top: 8px;font: 0.9rem;}
+    .only-portrait, .only-landscape{display: none;}
+    @media (orientation: portrait){.only-portrait{display: inline;}}
+    @media (orientation: landscape){.only-landscape{display: inline;}}

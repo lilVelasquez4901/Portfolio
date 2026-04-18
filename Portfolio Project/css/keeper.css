@@ -1,0 +1,106 @@
+:root{
+    --wrds: #ffcc00;
+    --wrds2: #ff9500;
+    --bg1: #4E3076;
+    --bg2: #1f202c;
+} body {
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+} h1, h3, p {
+    color: var(--wrds);
+} .main_Content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+} .abt_Me {
+    color: var(--wrds);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+} .skills_Con{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 25rem;
+    flex-direction: column;
+    align-self: flex-start;
+} .box_Title {
+    align-self: center;
+} .skills {
+    font-size: large;
+    display: flex;
+    border: 2px solid var(--wrds2);
+    color: var(--wrds);
+    padding: 5px;
+    margin: 5px;
+    justify-self: left;
+} .projects_Con{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: auto;
+    width: 25rem;
+} .projects {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} #resume_Download{
+    display: flex;
+    font-size: large;
+    width: fit-content;
+    border: 2px solid var(--wrds2);
+    padding: 5px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 5px;
+} #resume_Download > a:link {
+    color: var(--wrds);
+    font-size: large;
+} footer {
+    margin-top: auto;
+    border: 2px solid var(--wrds2);
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    flex-shrink: 0
+} th {
+    justify-items: flex-end;
+} .last {
+    display: flex;
+    flex-direction: column;
+} .tables {
+    display: flex;
+    flex-direction: column;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 9999;
+}  @media(min-width: 1280px){
+    .shard a{
+        font-size: 1rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > a {
+        top: 20%; left: 39%;
+    }
+}
+@media(min-width: 900px){
+    
+}
+   .orientation{margin-top: 8px;font: 0.9rem;}
+    .only-portrait, .only-landscape{display: none;}
+    @media (orientation: portrait){.only-portrait{display: inline;}}
+    @media (orientation: landscape){.only-landscape{display: inline;}}

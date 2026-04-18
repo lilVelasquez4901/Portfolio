@@ -1,0 +1,114 @@
+ :root {
+    --wrds: #ffcc00;
+    --wrds2: #ff9500;
+    --bg1: #4E3076;
+    --bg2: #1f202c;
+    --void: #131e20;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--void);
+    z-index: 9999;
+} body {
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+} h1, h3, p {
+    color: var(--wrds);
+} .mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 250px 25px 250px;
+    flex: 1;
+    border: 2px solid var(--void);
+    padding: 15px;
+    border-radius: 1rem;
+} .abt_Me {
+    color: var(--wrds);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+} #makeshiftFooter{
+    align-self: center;
+} .box_Title {
+    align-self: center;
+}  #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 9999;
+} .shard_lines {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+} .shards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+} .shard {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    pointer-events: none; 
+} .shard a {
+    position: absolute;
+    color: var(--wrds);
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: all;
+    left: 90%; top: 52%; transform: rotate(2deg)
+} #shard_Return {
+    clip-path: polygon(80% 60%, 100% 25%, 100% 80%);
+    background: var(--void);
+}  #pfp{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+} ol > li {
+    color: var(--wrds2);
+} a:visited {
+    color: var(--wrds);
+    font-weight: bolder;
+    text-decoration: line-through;
+} a:link {
+    color: var(--wrds2);
+    font-weight: bolder;
+    text-decoration: underline;
+} img {
+    height: 185px;
+}  @media(min-width: 1280px){
+    .shard a{
+        font-size: 1rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > a {
+        top: 20%; left: 39%;
+    }
+}
+@media(max-width: 1279px) and (min-width: 768px){
+    .shard a{
+        top: 45%; left: 88%;
+    } .mainContent{
+        font-size: larger;
+    }
+}
+   .orientation{margin-top: 8px;font: 0.9rem;}
+    .only-portrait, .only-landscape{display: none;}
+    @media (orientation: portrait){.only-portrait{display: inline;}}
+    @media (orientation: landscape){.only-landscape{display: inline;}}

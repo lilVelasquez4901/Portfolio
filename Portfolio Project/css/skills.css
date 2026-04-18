@@ -1,0 +1,128 @@
+:root{
+    --wrds: #ffcc00;
+    --wrds2: #ff9500;
+    --bg1: #4E3076;
+    --bg2: #1f202c;
+    --void: #131e20;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--void);
+    z-index: 9999;
+} body {
+    background: linear-gradient(90deg, var(--bg1), var(--bg2));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+} h1, h3, p {
+    color: var(--wrds);
+} .mainContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+} .boxTitle {
+    align-self: center;
+} .abt_Me {
+    color: var(--wrds);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+} #blackout {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    z-index: 9999;
+}  .shard_lines {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+} .shards {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}  .shard {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    pointer-events: none; 
+} .shard a {
+    position: absolute;
+    color: var(--wrds);
+    font-size: 1.2rem;
+    font-weight: bold;
+    pointer-events: all;
+    left: 90%; top: 52%; transform: rotate(2deg)
+}  #shard_Return {
+    clip-path: polygon(80% 60%, 100% 25%, 100% 80%);
+    background: var(--void);
+} #pfp {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+} .what_I_Do, .certs, .soft_Skills, .hard_Skills {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    width: 25rem;
+    flex-direction: column;
+    align-self: flex-start;
+} .box_Title {
+    align-self: center;
+} .w_I_D_Wrds, .certs_Wrds, .soft_Wrds, .hard_Wrds {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid var(--wrds2);
+    font-size: large;
+} ul > li {
+    color: var(--wrds2);
+} #html:hover {
+    background-color: orange;
+    color: silver;
+} #css:hover {
+    background-color: blue;
+    color: white;
+} #js:hover {
+    background-color: yellow;
+    color: black;
+} #jq:hover {
+    background-color: darkblue;
+    color: grey;
+} #py:hover {
+    background-color: dodgerblue;
+    color: yellow;
+}  @media(max-width: 1280px){
+    .shard a{
+        font-size: 1rem;
+    } #shard-pfp > #pfp {
+        top: 20%; left: 35%;
+    } #shard-pfp > a {
+        top: 20%; left: 39%;
+    }
+}
+@media(min-width: 768px) and (max-width: 1279px){
+    .shard a{
+        top: 55%; left: 85%;
+    }
+} @media(min-width: 480px) and (max-width: 767px){
+    .shard a{
+        top: 45%;
+    }
+}
+   .orientation{margin-top: 8px;font: 0.9rem;}
+    .only-portrait, .only-landscape{display: none;}
+    @media (orientation: portrait){.only-portrait{display: inline;}}
+    @media (orientation: landscape){.only-landscape{display: inline;}}
