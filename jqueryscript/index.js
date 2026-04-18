@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(document).one('click', function() {
-        let audio = new Audio('../audios/glass-breaking-sound-effect_wLZSIYn.mp3');
+        let audio = new Audio('./audios/glass-breaking-sound-effect_wLZSIYn.mp3');
         setTimeout(function() {
             audio.play();
         }, 3000);
@@ -18,7 +18,7 @@ $(document).ready(function() {
             } else {
                 $('#blackout').fadeIn(150, function() {
                     setTimeout(function() {
-                        window.location.href = '../html/afterTheBreak.html';
+                        window.location.href = './html/afterTheBreak.html';
                     }, 3000);
                 });
             }
