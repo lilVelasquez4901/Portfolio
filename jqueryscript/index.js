@@ -18,7 +18,7 @@ $(document).ready(function() {
             } else {
                 $('#blackout').fadeIn(150, function() {
                     setTimeout(function() {
-                        window.location.href = '../html/afterTheBreak.html';
+                        window.location.href = 'html/\afterTheBreak.html';
                     }, 3000);
                 });
             }
